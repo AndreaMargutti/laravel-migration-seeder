@@ -7,9 +7,9 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-12">
+                <h2>Treni disponibili il {{$day}}</h2>
                 @forelse ( $trains as $trains )
                     @once($trains->departure_day)
-                        <h2>Treni disponibili il {{$trains->departure_day}}</h2>
                     @endonce
                 <div class="card">
                     <div class="card-body">

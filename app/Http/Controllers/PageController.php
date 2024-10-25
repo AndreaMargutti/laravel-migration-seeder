@@ -10,8 +10,9 @@ class PageController extends Controller
     //
     public function home() {
 
-        $trains = Train::where('departure_day', '2024-10-05')->get();
+        $day = '2024-10-05';
+        $trains = Train::where('departure_day', $day)->get();
 
-        return view('pages.home', compact('trains'));
+        return view('pages.home', compact('trains', 'day'));
     }
 }
