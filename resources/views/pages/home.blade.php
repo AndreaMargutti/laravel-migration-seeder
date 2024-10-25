@@ -3,12 +3,14 @@
 @section("page-title", "Homepage")
 
 @section("main-content")
-    <h1>Treni Disponibili</h1>
     {{-- @dd($trains) --}}
     <div class="container-fluid">
         <div class="row">
             <div class="col-12">
                 @forelse ( $trains as $trains )
+                    @once($trains->departure_day)
+                        <h2>Treni disponibili il {{$trains->departure_day}}</h2>
+                    @endonce
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title"><strong>{{$trains->brand}}</strong></h5>
