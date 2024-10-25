@@ -9,8 +9,6 @@
             <div class="col-12">
                 <h2>Treni disponibili il {{$day}}</h2>
                 @forelse ( $trains as $trains )
-                    @once($trains->departure_day)
-                    @endonce
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title"><strong>{{$trains->brand}}</strong></h5>
