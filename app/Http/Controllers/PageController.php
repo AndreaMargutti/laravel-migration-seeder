@@ -2,12 +2,16 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Train;
 use Illuminate\Http\Request;
 
 class PageController extends Controller
 {
     //
     public function home() {
-        return view('pages.home');
+
+        $trains = Train::all();
+
+        return view('pages.home', compact('trains'));
     }
 }

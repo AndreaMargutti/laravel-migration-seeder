@@ -3,5 +3,6 @@
 @section("page-title", "Homepage")
 
 @section("main-content")
-    <h1>HomePage</h1>
+    <h1>Treni Disponibili</h1>
+    {{-- @dd($trains) --}}
 @endsection
