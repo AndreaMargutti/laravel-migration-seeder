@@ -8,6 +8,12 @@
 </head>
 <body>
     <h1>Lista Passeggeri</h1>
-
+    <ul>
+    @foreach ( $passengers as $passenger )
+        <li>
+            {{ $passenger->first_name }}
+        </li>
+    @endforeach
+    </ul>
 </body>
 </html>
